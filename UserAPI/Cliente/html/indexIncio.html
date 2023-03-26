@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!---LETRAS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@100;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En construccion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styleInicio.css">
+
+    <!--Bootstrap-->
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <!---Pagina de inicio-->
+    <section>
+        <nav class="navbar fixed-top">
+            <div class="navBarInicio">
+                <li id="logoInicio"><i class="fa-solid fa-piggy-bank"></i></li>
+                <li id="nombreInicio">Gleaming Notecase</li>            
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <li id="menuInicio"><i class="fa-solid fa-grip-lines"></i></i></a></li>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    
+                    <div class="contMenuDesplegable">
+                        <li><h3>Inicia sesion</h3></li>
+
+                        <!--<form action="/php/login.php" method="post">-->
+                            <li><input class="datos"  type="E-mail" id="correo" name="correo" placeholder="Usuario"></li>
+                            <li><input class="datos"  type="password" id="contraseña" name="contraseña" placeholder="Contraseña"></li>
+                            <li><a href="/html/pagUsuario.html"><input class="inicioSesion" type="submit" value="Iniciar Sesion"></a></li>
+                        <!--</form>-->
+
+                        <h4>¿Has olvidado tu contraseña?</h4>
+                        <h4 onclick=abrirVentanaRegistro()>Registrate</h4>   
+                                 
+                    </div>
+                </div>                
+            </div>
+        </nav>       
+    </section>
+    <!---Segunda sección-->
+    <div class="secciones2">
+        <section class="main"  id="priParte">
+            
+            <div class="informacionInicio">
+                <p>
+                    Una de las mejores formas para ahorrar dinero es 
+                    establecer una meta. 
+                    Empiece por pensar para qué podría querer ahorrar, 
+                    tanto a corto plazo (de uno a tres años) como a largo plazo (cuatro años o más). Luego decida cuánto dinero necesitará y cuánto tiempo le puede tomar ahorrarlo.
+                </p>
+            </div>
+
+            <div class="buttonConocenos">
+                <a href="#segParte"> <h1>Conocenos</h1></a>
+            </div>   
+            
+
+            
+        
+    
+        </section> 
+
+        <section class="conocenos"  id="segParte">
+
+            <div class="contCarrusel">
+                <div class="divGrande">
+                    <img src="/img/fotoAhorros.png" alt="Imagen 1" class="imgCarrusel">
+                    <img src="/img/fotoGastos.png" alt="Imagen 2" class="imgCarrusel">
+                </div>
+
+                <ul class="puntos">
+                    <li class="punto"></li>
+                    <li class="punto activo"></li>
+                </ul>
+            </div>
+
+        </section>        
+    </div>
+
+
+    <div class="contVentRegistrar" id="contVentRegistrar">
+        <div id="cerrarVentRegistro" onclick=cerrarVentRegistro()><h1>X</h1></div>
+        <h1>Registrarse</h1>
+        <div class="datosRegistro">
+                <!--<form action="/php/registro.php" method="post">-->
+                    <h2><input type="text" placeholder="usuario" name="correo" class="correo"></h2>
+                    <h2><input type="password" placeholder="contraseña" name="contraseña" class="contraseña"></h2>
+                    <h2><input type="submit" name="btnRegistro" class="btnRegistro" value="Registrarse"></h2>
+                <!--</form>-->
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script src="/js/jsInicio.js"></script>
+<script src="/js/jsLogueo.js"></script>
+
+    <!---FIN Pagina de inicio-->
+
+
+    
+</body>
+</html>

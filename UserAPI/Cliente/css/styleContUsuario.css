@@ -1,0 +1,540 @@
+/*--------------CONTENIDO--------------*/
+
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+
+/*------------------Metas-------------*/
+
+.goals{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.metasIndividuales{
+    
+    height: 12vh;
+    width: 74vw;
+    border: 2px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.623), 0 0 20px rgba(255, 0, 0, 0.336);
+    margin: 5vh;
+    display: grid;
+
+    padding: 0 3vw;
+    grid-template-rows: 8vh 4vh;
+    
+}
+
+.contMetas{
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 3vw 15vw 44vw 15vw  3vw;
+    width: 100%;
+}
+
+.contMetas i{
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.623), 0 0 20px rgba(255, 0, 0, 0.336);
+    font-size: 2.7vw;
+    margin: auto;
+    left: 0;
+
+}
+
+.contMetas p{
+    font-family: 'Edu SA Beginner', cursive;  
+    font-size: 2.3vw;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.623), 0 0 20px rgba(255, 0, 0, 0.336);
+    margin: auto;
+}
+
+
+.progress{
+    position: relative;
+    margin: 0vh 3vw 2vh 3vw;
+    width: 74vw;
+    height: 2vh;
+    background-color: rgba(255, 0, 0, 0.103);
+    
+    border-radius: 7px;
+}
+
+.barra{
+    
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.308);
+    border-radius: 7px;
+}
+
+.rango{
+    -webkit-appearance: none;
+    position: absolute;
+    width: 74vw;
+    height: 0.7vw;
+    z-index: 3;
+    outline: none;
+    border-radius: 30px;
+    background: rgba(255, 0, 0, 0.103);
+}
+
+.rango::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+}
+
+.selector{
+    height: 1.5vw;
+    width: 1.5vw;
+    position: absolute;
+    top: -0.5vw;
+    transform: translate(-50%);
+    z-index: 2;
+    
+}
+
+.btnSelector{
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.progreso{
+    position: absolute;
+    height: 0.7vw;
+    background: red;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+}
+
+.total{
+    margin: 4vh;
+    width: 80vw;
+
+    display: grid;
+    grid-template-columns: 20vw 60vw;
+    
+
+}
+.total p{
+    font-size: 2.5vw;
+    font-family: 'Edu SA Beginner', cursive;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    text-shadow: 0 0 8px rgba(255, 85, 0, 0.8), 0 0 18px rgba(255, 85, 0, 0.338);
+}
+
+.totalProgreso{
+    display: flex;
+    justify-content: left;
+    height: 5vh;
+    width: 60vw;
+    background-color: rgba(255, 85, 0, 0.136);
+    box-shadow: 0 0 8px rgb(255, 85, 0), 0 0 20px rgba(255, 85, 0, 0.687);
+    border-radius: 8px;
+}
+
+.barraTotal{
+    border-radius: 8px;
+    background-color: rgba(255, 85, 0, 0.519);
+}
+
+
+
+/*Configuración / usuario */
+
+.cuenta{
+    height:85vh;
+    width: 100%;
+}
+
+.confi{
+    font-family: 'Dancing Script', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+
+.cuenta h1{
+    font-family: 'ABeeZee', sans-serif; 
+    font-size: 4vw;
+    text-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+    text-align: center;
+    height: 4vw;
+    padding: 2vw;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.usuario{
+    display: grid;
+    grid-template-columns: 12vw auto 3vw; 
+    width: 100%;   
+    height: 7vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.foto{
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    background-image: url(/img/monopoly.png);
+    background-size: 100%;
+    margin-left: 3vw;
+}
+
+.infoUsuario{
+    display:list-item;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.infoUsuario h3{
+    text-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 3vw;
+}
+.infoUsuario p{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 2vw;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+.linea{
+    width: 90%;
+    margin: 5%;
+    height: 2px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+}
+
+.cuenta h4{
+    font-size: 2vw;
+    margin: 2vw 3vw;
+}
+
+
+.contCuenta{
+    background-color: rgba(255, 255, 255, 0.152);
+    position: relative;
+}
+
+
+
+
+
+
+/*----GASTOS----*/
+
+.gastos{
+    position: relative;
+    height: 88%;
+    width: 92%;
+    display: grid;
+    grid-template-columns: 1fr 4% 1fr 4% 1fr;
+    margin: 3%;
+}
+
+.tarjetaGastos{
+    position: relative;
+    height: 94%;
+    width: 100%;
+}
+
+.tarjetaGastos li{
+    display: grid;
+    grid-template-columns: 13% 53% 38%;
+    width: 94%;
+    height: 3vw;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.tarjetaGastos h1{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 3.5vw;
+    text-shadow: 0 0 8px rgba(56, 255, 34, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+
+    height: 5vw;
+    text-align: center;
+
+    
+}
+
+.tarjetaGastos i{
+    font-size: 2.3vw;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    text-shadow: 0 0 4px rgba(56, 255, 34, 0.829), 0 0 10px rgba(34, 156, 255, 0.84);
+}
+
+.tarjetaGastos h3{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 2vw;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    text-shadow: 0 0 4px rgba(56, 255, 34, 0.829), 0 0 10px rgba(34, 156, 255, 0.84);
+}
+
+.tarjetaGastos h4{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 1.5vw;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.lineaVertical{
+    width: 2px;
+    height: 96%;
+    margin: auto;
+
+    background-color: white;
+    box-shadow: 0 0 8px rgba(56, 255, 34, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+}
+
+#Servicios{
+    max-width: 100%;
+    max-block-size: 100%;
+}
+
+
+.estadisticas{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    font-size: 8vw;
+}
+
+
+/*--------------Contenido configuración--------------*/
+/*contCuentaConf*/
+.contCuentaConf{ 
+    position: absolute;
+    height: 92%;
+    width: 80%;
+
+    padding: 2% 5%;
+
+    visibility: hidden;
+    opacity: 0;
+}
+.contCuenta li{
+    display: block;
+}
+.contCuenta h4{
+    font-family: 'ABeeZee', sans-serif; 
+    font-size: 2vw;
+    margin: 5% 0 2% 0;
+    text-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+}
+.lineaConfi{
+    height: 2px;
+    width: 110%;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+    margin: 0;
+}
+.contCuenta p{
+    font-size: 1.8vw;
+    margin: 1.2% 0;
+    
+}
+
+.contCuentaPerf{
+    position: absolute;
+    height: 92%;
+    width: 80%;
+
+    padding: 2% 5%; 
+}
+
+.contCuentaPerf input{
+    height: 1.7vw;
+    box-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(34, 156, 255, 0.84), 0 0 22px rgba(34, 156, 255, 0.754);
+    margin: 3% 0;
+    width: 35%;
+}
+
+.contCuentaAyuda{
+    position: absolute;
+    height: 92%;
+    width: 80%;
+
+    padding: 2% 5%;   
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.contCuentaAyuda h4{
+    text-shadow: none;
+}
+
+.cuenta h4{
+    cursor: pointer;
+}
+
+/*Cambios de Valores*/
+
+/*Cambio tarjeta Gastos*/
+
+.contVentGastos{
+    font-family: 'ABeeZee', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.edicionGastos{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: absolute;
+    top: 20%;
+    height: 60%;
+    width: 60%;
+    background-color: rgb(27, 26, 26);
+    border-radius: 30px;
+    box-shadow: 0 0 8px rgba(234, 255, 234, 0.829), 0 0 12px rgba(255, 255, 255, 0.84), 0 0 18px rgba(169, 249, 255, 0.754);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.edicionGastos select{
+    margin: 20% 10%;
+    height: 12%;
+    border-radius: 30px;
+}
+
+.selectorGastos{
+    align-items: center;
+    text-align: center;
+    color: black;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 8px rgba(234, 255, 234, 0.829), 0 0 12px rgba(255, 255, 255, 0.84);
+    color: rgb(39, 63, 60);
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.selectorGastos option{
+    color:black;
+}
+
+.valorGasto{
+    color: black;
+    margin-right: 15%;
+    padding-left: 5%;
+}
+
+.vistaGastos{
+    position: relative;
+    font-size: 0.9vw;
+    margin: 10%;
+    align-items: center;
+}
+
+.vistaGastos input{
+    margin-top:15%;
+    border-radius: 30px;
+    font-size: 1.4vw;
+    height: 3vw;
+    width: 34%;
+}
+
+.btnActualizar{
+    background-color: white;
+    color: rgb(80, 104, 89);
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(59, 235, 211, 0.84), 0 0 22px rgba(34, 236, 85, 0.754);
+    cursor: pointer;
+}
+
+#cerrarVent{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -10%;
+    right: -2%;
+    font-size: 0.5vw;
+    background-color: white;
+    border-radius: 50%;
+    width: 1.6vw;
+    height: 1.6vw;
+    align-items: center;
+    box-shadow: 0 0 2px rgba(34, 156, 255, 0.829), 0 0 6px rgba(59, 235, 211, 0.84), 0 0 10px rgba(34, 236, 85, 0.754);
+    cursor: pointer;
+}
+
+#cerrarVent h1{
+    color: black;
+}
+
+.btnCambioDatosGastos{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 3%;
+    width: 100%;
+    height: 3vw;
+    
+}
+
+.cambioDatosGastos{
+    font-size: 1.2vw;
+    font-weight: bold;
+    width: 15vw;
+    border-radius: 30px;
+    color: rgb(51, 145, 161);
+    box-shadow: 0 0 8px rgba(34, 156, 255, 0.829), 0 0 12px rgba(59, 235, 211, 0.84), 0 0 22px rgba(34, 236, 85, 0.754);
+    cursor: pointer;
+}
+
+

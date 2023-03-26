@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!---LETRAS-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@100;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+
+    <!--GENERALIDADES DE COMPATIBILIDAD-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="/css/styleUsuario.css">
+    <link rel="stylesheet" href="/css/styleContUsuario.css">
+    <link rel="stylesheet" href="/css/styleEstadisticas.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"></script>
+
+    <title>En construccion</title>
+    
+</head>
+
+<body>
+
+
+    <!--Pagina-->
+    <div class="pagina">
+        <div class="espacioBarraLateral">
+            <label id="cartera"><i id="iconCartera" class="fa-solid fa-wallet"></i></label>
+            <label id="metas"><i id="iconMetas" class="fa-solid fa-arrows-rotate"></i></label>
+            <label id="estadisticas"><i id="iconEstadisticas" class="fa-solid fa-arrow-trend-up" onclick=graficar()></i></label>
+            <label id="configuracion"><i id="iconConfiguracion" class="fa-solid fa-user-astronaut"></i></label>
+            <a href="indexIncio.html"><li ><i id="iconSalir" class="fa-solid fa-arrow-left"></i></li></a>
+        </div>
+
+        <div class="contDerecha">
+            <div class="espacioSaldo" id="tarjetaSaldo">
+                <li class="saldoTotal" id="saldoTotal">Saldo: $2.000.000</li>
+                <li class="saldoAhorrado">Ahorrado $<li class="saldoAhorrado" id="saldoAhorrado">0</li></li>
+            </div>
+
+            <div class="espacioContenido">                
+                
+
+                <div class="goals" id="tarjetaMetas">
+                    <li class="metasIndividuales">
+                        <div class="contMetas">
+                            <div></div>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <p class="nombreMeta">Celular</p>
+                            <p id="totalMetaCel"> 0 </p>
+                            <div></div>
+                        </div>
+                        
+                        <div class="progress">
+                                <input type="range" min="0" max="800000" value="0" step="5000" id="celular" class="rango" onmousemove=cualquierCosa(0)>
+                                <div class="selector" id="celularSelector" >
+                                    <div class="btnSelector">
+                                    </div>
+                                </div>
+                                <div class="progreso" id="progresoCelular">
+
+                                </div>
+                        </div>
+                    </li>
+                    
+                    
+        
+                    <li class="metasIndividuales">
+                        
+                        <div class="contMetas">
+                            <div></div>
+                            <i class="fa-solid fa-laptop"></i>
+                            <p class="nombreMeta">Portatíl</p>
+                            <p id="totalMetaPor"> 0 </p>
+                            <div></div>
+                        </div>
+                        <div class="progress">
+                            <input type="range" min="0" max="2000000" value="0" step="5000" id="portatil" class="rango" onmousemove=cualquierCosa(1)>
+                                <div class="selector" id="portatilSelector" >
+                                    <div class="btnSelector">
+                                    </div>
+                                </div>
+                                <div class="progreso" id="progresoPortatil">
+
+                                </div>
+                        </div>
+                        
+                    </li>
+        
+        
+                    <li class="metasIndividuales">
+                        
+                        <div class="contMetas">
+                            <div></div>
+                            <i class="fa-solid fa-plane-departure"></i>
+                            <p class="nombreMeta">Viaje</p>
+                            <p id="totalMetaVia"> 0 </p>
+                            <div></div>
+                        </div>
+                        <div class="progress">
+                            <input type="range" min="0" max="5000000" value="0" step="5000" id="viaje" class="rango" onmousemove=cualquierCosa(2)>
+                                <div class="selector" id="viajeSelector" >
+                                    <div class="btnSelector">
+                                    </div>
+                                </div>
+                                <div class="progreso" id="progresoViaje">
+
+                                </div>
+                        </div>
+                        
+                    </li>
+        
+        
+                    <li class="metasIndividuales">
+                        
+                        <div class="contMetas">
+                            <div></div>
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <p class="nombreMeta">Moto</p>
+                            <p id="totalMetaMoto"> 0 </p>
+                            <div></div>
+                        </div>
+                        <div class="progress">
+                            <input type="range" min="0" max="5000000" value="0" step="5000" id="moto" class="rango" onmousemove=cualquierCosa(3)>
+                                <div class="selector" id="motoSelector" >
+                                    <div class="btnSelector">
+                                    </div>
+                                </div>
+                                <div class="progreso" id="progresoMoto">
+
+                                </div>
+                        </div>
+                        
+                    </li>
+                    <div class="total">
+                        <p>Total </p>
+                        <li class="totalProgreso">
+                            <div class="barraTotal" id="barraTotal"></div>
+                        </li>                   
+                    </div>
+        
+        
+                </div>  
+
+                
+
+                <div class="estadisticas" id="tarEstadisticas">
+                    <div class="graficas">
+                        <div class="contGrafica1" style="height:100%; width:100%">
+                            <div class="exteriorGr1" style="position:absolute; height: 30vw; width: 25vw;">
+                                <canvas id="grafica1" ></canvas>
+                            </div>
+                            <div class="tituloGrafica">
+                                <h1>Distribución metas</h1>
+                            </div>
+                        </div>
+                        <div class="contGrafica2" style="height:100%; width:100%">
+                            <div class="exteriorGr2" style="position:absolute; width: 40vw;">
+                                <canvas id="grafica2"></canvas>
+                            </div>
+                            <div class="tituloGrafica">
+                                <h1>Balance metas</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="confi" id="tarjetaConfiguracion">
+                    <div class="cuenta">
+                        <h1>Cuenta</h1>
+                        <div class="usuario">
+                            <li class="foto"></li>
+                            <div class="infoUsuario">
+                                <li><h3 id="userName">Usuario</h3></li>
+                            </div>
+                        </div>
+
+                        <li class="linea"></li>
+
+
+
+                        <h4 id="conPerfil">Perfil</h4>
+                        <h4 id="conConfi">Configuración</h4>
+                        <h4 id="conAyuda">Ayuda</h4>
+    
+                    </div>
+                    <div class="contCuenta">
+                        <div class="contCuentaPerf" id="contCuentaPerf">
+                            <li>
+                                <h4>Acerca de</h4>
+                                <div class="lineaConfi"></div>
+
+                                <p>Nombre de usuario</p>
+                                <p><input id="nombreUsuario" type="name" placeholder="Usuario" ></p>
+                                
+                                <p>Contraseña</p>
+                                <p><input id="contraseñaUsuario" type="contraseña" placeholder="********" ></p>
+                                
+                            </li>
+                        </div>
+
+                        <div class="contCuentaConf" id="contCuentaConf">
+                            <li>
+                                <h4>Detalles de la cuenta</h4>
+                                <div class="lineaConfi"></div>
+                                <p>Cambiar idioma</p> 
+                            </li>
+
+                            <li>
+                                <h4>Notificaciones</h4>
+                                <div class="lineaConfi"></div>
+                                <p>Cambiar sonido</p>
+                                <p>Cambiar hora de notificación</p>
+                            </li>
+                            <li>
+                                <h4>Correos electrónicos</h4>
+                                <div class="lineaConfi"></div>
+                                <p>Desactivas correo</p> 
+                            </li>                            
+                        </div>
+
+                        <div class="contCuentaAyuda" id="contCuentaAyuda">
+                            <h4><a href="/html/ayuda.html" target="_blank">Reportar un problema</a></h4>
+                            <div class="lineaConfi"></div>
+                            <h4><a href="/html/ayuda.html" target="_blank">Servicio de ayuda</a></h4>
+                            <div class="lineaConfi"></div>
+                            <h4><a href="/html/ayuda.html" target="_blank">Ayuda sobre privacidad y seguridad</a></h4>
+                            <div class="lineaConfi"></div>
+                        </div>
+
+
+
+                    </div>
+                </div>   
+                
+                
+
+                <div class="gastos" id="tarjetaGastos">
+                    <div  class="tarjetaGastos">
+                        <h1 id="hogar">Hogar</h1>
+                        <li>
+                            <i class="fa-solid fa-faucet-drip"></i>
+                            <h3>Servicios</h3>
+                            <h4 id="Servicios">200000</h4>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-house-signal"></i>
+                            <h3>Internet</h3>
+                            <h4 id="Internet">50000</h4>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-utensils"></i>
+                            <h3>Comida</h3>
+                            <h4 id="Comida">300000</h4>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-soap"></i>
+                            <h3>Aseo</h3>
+                            <h4 id="Aseo">50000</h4>
+                        </li>
+
+                        
+                    </div>
+                    <div class="lineaVertical"></div>
+
+                    <div  class="tarjetaGastos">
+                        <h1>Gasto personal</h1>
+                        <li>
+                            <i class="fa-solid fa-bus-simple"></i>
+                            <h3>Transporte</h3>
+                            <h4 id="Transporte">100000</h4>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-shirt"></i>
+                            <h3>Ropa</h3>
+                            <h4 id="Ropa">120000</h4>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                            <h3>Cuidado</h3>
+                            <h4 id="Cuidado">100000</h4>
+                        </li>
+
+                    </div>
+
+                    <div class="lineaVertical"></div>
+                    <div class="tarjetaGastos">
+                        <h1>Extras</h1>
+                        <li>
+                            <i class="fa-solid fa-paw"></i>
+                            <h3>Mascota</h3>
+                            <h4 id="Mascota">80000</h4>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                            <h3>Salidas</h3>
+                            <h4 id="Salidas">200000</h4>
+                        </li>
+
+                    </div>
+
+                    <div class="btnCambioDatosGastos"><input type="button" class="cambioDatosGastos" id="cambioDatosGastos" value="Editar Valores" onclick=abrirVentanaCambio()></div>
+
+                </div>
+
+
+
+                <div class="contVentGastos">
+                    <div class="edicionGastos" id="edicionGastos">
+
+                        <select class="selectorGastos" id="selectorGastos" onchange=seleccionarGasto()>
+                            <option selected disabled>Elija el gasto</option>
+                            <option value="Servicios">Servicios</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Comida">Comida</option>
+                            <option value="Aseo">Aseo</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Ropa" class="ropa">Ropa</option>
+                            <option value="Cuidado">Cuidado</option>
+                            <option value="Mascota">Mascota</option>
+                            <option value="Salidas">Salidas</option>
+                        </select>
+
+                        <div class="vistaGastos">
+                            <div id="cerrarVent" onclick=cerrarVent()><h1>X</h1></div>
+                            <h1 id="gastoSeleccionado">Gasto seleccionado:</h1>
+                            <input type="number" min="0" max="10000000" step="10000" id="valorGasto" class="valorGasto">
+                            <input type="button" value="Actualizar" id="btnActualizar" class="btnActualizar" onclick=actualizarValor(),actualizarValores()> 
+                        </div>
+                    </div>
+                </div>
+
+
+            </divw>
+        </div>
+    </div>
+
+    <script src="/js/jsUsuario.js"></script>
+    <script src="/js/jsEstadisticas.js"></script>
+    <script src="/js/jsCambioGastos.js"></script>
+    <script src="/js/jsDeslizador.js"></script>
+
+
+</body>
+
+</html>

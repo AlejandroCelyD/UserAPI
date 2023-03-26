@@ -1,0 +1,21 @@
+INSERT INTO usuario VALUES(1,'Gsa14','Gisella','g123','GisellaG@gmail.com');
+INSERT INTO usuario VALUES(2,'AngHe','Angel','a123','AngelH24@gmail.com');
+INSERT INTO usuario VALUES(3,'NatG','Nataly','n123','NatalyGZ@gmail.com');
+INSERT INTO usuario VALUES(4,'PalF','Palomo','p123','Fepo@gmail.com');
+INSERT INTO usuario VALUES(5,'CamD','Camila','c123','Cam20@gmail.com');
+INSERT INTO usuario VALUES(6,'Quiro','Maria','m123','QuirogaB@gmail.com');
+INSERT INTO usuario VALUES(7,'SosMir','Miranda','m123','RbSosa@gmail.com');
+INSERT INTO usuario VALUES(8,'MoraJ','Jose','j123','LicMora@gmail.com');
+
+INSERT INTO rol VALUES(1,'Normal','Permisos Basicos');
+INSERT INTO rol VALUES(2,'Premium','Permisos Avanzados');
+INSERT INTO rol VALUES(3,'Administrador','Permisos Administrativos');
+
+INSERT INTO permiso VALUES(1,'Acceso','ConfiguracionPerfilPropio','1');
+INSERT INTO permiso VALUES(2,'Acceso','VerPerfilExterno','1');
+INSERT INTO permiso VALUES(3,'Interaccion','EnviarMensaje','1');
+INSERT INTO permiso VALUES(4,'Modificacion','CambiarColorDeNombrePropio','2');
+INSERT INTO permiso VALUES(5,'Modificacion','CambiarContrasenaPropia','1');
+INSERT INTO permiso VALUES(6,'Acceso','VerPerfilPrivado','3');
+INSERT INTO permiso VALUES(7,'Modificacion','EliminarPerfilExterno','3');
+INSERT INTO permiso VALUES(8,'Acceso','CambiarUserNamePropio','1');

@@ -1,0 +1,46 @@
+.graficas{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.contGrafica1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.contGrafica2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.exteriorGr1{
+    position: absolute;
+    margin-top: 8vw;
+}
+.exteriorGr2{
+    height: 15vw;
+    margin-top: 10vw;
+}
+
+
+.tituloGrafica{
+    position: absolute;
+    top: 3vw;
+    font-size: 1vw;
+}
+
+.tituloGrafica h1{
+    text-shadow: 0 0 5px rgb(248, 145, 54),
+        0 0 10px rgb(221, 111, 26),
+        0 0 20px rgb(196, 69, 14),
+        0 0 80px rgb(174, 49, 8);
+}
+
+
+

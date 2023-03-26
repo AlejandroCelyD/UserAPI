@@ -1,0 +1,36 @@
+CREATE TABLE IF NOT EXISTS usuario(
+	k_id_usuario SERIAL PRIMARY KEY,
+	n_username VARCHAR(15) NOT NULL,
+	n_nombre VARCHAR(15) NOT NULL,
+	o_contrasena VARCHAR(20) NOT NULL,
+	o_correo VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS rol(
+	k_id_rol SERIAL PRIMARY KEY,
+	n_nombre VARCHAR(15) NOT NULL,
+	o_descripcion VARCHAR(30)
+);
+
+CREATE TABLE IF NOT EXISTS permiso(
+	k_id_permiso SERIAL PRIMARY KEY,
+	o_categoria VARCHAR(15) NOT NULL,
+	n_nombre VARCHAR(30) NOT NULL,
+	v_acceso INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS usuario_rol(
+	k_id_usuario SERIAL,
+	k_id_rol SERIAL,
+	CONSTRAINT pk_usuaraio_rol PRIMARY KEY (k_id_usuario, k_id_rol),
+	CONSTRAINT fk_k_id_usuario FOREIGN KEY (k_id_usuario) REFERENCES usuario (k_id_usuario) MATCH full,
+	CONSTRAINT fk_k_id_rol FOREIGN KEY (k_id_rol) REFERENCES rol (k_id_rol) MATCH full
+);
+
+CREATE TABLE IF NOT EXISTS rol_permiso(
+	k_id_rol SERIAL,
+	k_id_permiso SERIAL,
+	CONSTRAINT pk_rol_permiso PRIMARY KEY (k_id_rol, k_id_permiso),
+	CONSTRAINT fk_k_id_rol FOREIGN KEY (k_id_rol) REFERENCES rol (k_id_rol) MATCH full,
+	CONSTRAINT fk_k_id_permiso FOREIGN KEY (k_id_permiso) REFERENCES permiso (k_id_permiso) MATCH full
+);

@@ -1,0 +1,165 @@
+/*--------------PRINCIPAL--------------*/
+html{
+    scroll-behavior: smooth;
+    background-color: rgb(255, 255, 255);
+
+}
+
+*{
+    list-style: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+/*--------------GENERALIDADES Y FONDO --------------*/
+
+body{
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(/img/ladrillopared.jpg);
+    background-size: 100vw 100vh;
+}
+
+/*Cuadricula pagina*/
+
+.pagina{
+    height: 100%;
+    width: 100%;    
+    display: grid;
+    grid-template-columns: 10vw 90vw;
+}
+
+.contDerecha{
+    height: 100%;
+    width: 100%; 
+    display: grid;
+    grid-template-rows: 15vh 85vh;
+}
+
+/*--------------BARRA LATERAL--------------*/
+.espacioBarraLateral{
+    position: relative;
+    color: white;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    justify-content: space-evenly;
+    
+    flex-direction: column;
+
+    background-color: rgba(255, 255, 255, 0.084);
+
+}
+
+.espacioBarraLateral label, li{
+    display: flex;
+    justify-content: center;
+    font-size: 6vw;
+    object-fit: cover;
+}
+
+
+/*--------------SALDO--------------*/
+.espacioSaldo{
+    height: 100%;
+    width: 100%; 
+    display: flex;  
+}
+
+.espacioSaldo li{
+    font-family: 'Dancing Script', cursive;
+    display:flex;
+    flex-direction: column;
+    font-size: 4vw;
+}
+
+.saldoTotal{
+    margin-left: 8%;
+    color: white;
+    text-shadow: 0 0 5px rgb(148, 34, 255),
+    0 0 10px rgb(148, 34, 255),
+    0 0 20px rgb(148, 34, 255),
+    0 0 80px rgb(91, 0, 177);
+}
+
+.saldoAhorrado{
+    margin-left: 7%;
+    text-shadow: 0 0 5px rgb(12, 221, 109),
+    0 0 10px rgb(13, 209, 46),
+    0 0 20px rgb(7, 244, 62),
+    0 0 80px rgb(24, 177, 0);
+}
+
+#saldoAhorrado{
+    margin-left: 0;
+}
+
+.espacioContenido{
+    position: relative;
+}
+
+
+/*Cartera(Saldo)*/
+
+#iconCartera:hover {
+    color: rgb(202, 255, 228);
+    text-shadow: 0 0 5px rgb(54, 196, 248),
+        0 0 10px rgb(26, 94, 221),
+        0 0 20px rgb(14, 53, 196),
+        0 0 80px rgb(10, 6, 138);
+        transition: 1.5s all;
+    cursor: pointer;
+}
+
+#iconMetas:hover {
+    color: rgb(255, 194, 252);
+    text-shadow: 0 0 5px rgb(248, 77, 54),
+        0 0 10px rgb(221, 26, 26),
+        0 0 20px rgb(196, 41, 14),
+        0 0 80px rgb(138, 21, 6);
+    transition: 1.5s all;
+    cursor: pointer;
+}
+
+#iconEstadisticas:hover {
+    color: rgb(255, 251, 194);
+    text-shadow: 0 0 5px rgb(248, 145, 54),
+        0 0 10px rgb(221, 111, 26),
+        0 0 20px rgb(196, 69, 14),
+        0 0 80px rgb(174, 49, 8);
+    transition: 1.5s all;
+    cursor: pointer;
+}
+
+#iconConfiguracion:hover {
+    color: rgb(251, 224, 255);
+    text-shadow: 0 0 5px rgb(158, 54, 248),
+        0 0 10px rgb(130, 26, 221),
+        0 0 20px rgb(102, 14, 196),
+        0 0 80px rgb(74, 6, 138);
+        transition: 1.5s all;
+    cursor: pointer;
+}
+
+#iconSalir:hover {
+    color:rgb(0, 0, 0);
+    text-shadow: 0 0 5px rgb(161, 248, 54),
+        0 0 10px rgb(65, 221, 26),
+        0 0 20px rgb(38, 196, 14),
+        0 0 80px rgb(6, 138, 21);
+        transition: 1.5s all;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
